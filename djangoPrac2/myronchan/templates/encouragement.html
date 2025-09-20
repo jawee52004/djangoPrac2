@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encouragement App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>{{ phrase }}</h1>
+
+    <form method="get">
+        <button type="submit" name="show_image" value="true">Show Image</button>
+    </form>
+
+    {% if show_image %}
+        <div>
+            <img src="{% static 'images/encourage.png' %}" alt="Encouragement" width="300">
+        </div>
+    {% endif %}
+</body>
+</html>
